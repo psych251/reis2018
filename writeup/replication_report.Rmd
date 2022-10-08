@@ -37,8 +37,8 @@ Participants currently cohabiting with a romantic partner will be recruited from
 * Acquiring materials for the global-local visual orientation task. I may need to contact the authors to obtain the images they used and to see how they were displayed to participants. Hopefully I will not have trouble getting a response.
 
 ### Links
-View the project repository on Github: [Psych 251 repo](https://github.com/psych251/reis2018)
+View the project repository on Github: [Psych 251 repo](https://github.com/psych251/reis2018){target="_blank"}
 
-View the original paper: [Reis et al., 2018](https://github.com/psych251/reis2018/blob/main/original_paper/Reis_et_al_2018.pdf)
+View the original paper: [Reis et al., 2018](https://github.com/psych251/reis2018/blob/main/original_paper/Reis_et_al_2018.pdf){target="_blank"}
 
 ***
