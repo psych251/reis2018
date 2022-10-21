@@ -24,7 +24,7 @@ Intellectual humility is my primary research focus. The affective roots of IH ar
 Participants currently cohabiting with a romantic partner will be recruited from Prolific and randomized to one of two conditions^[Note that this differs from the original study, in which there was also a neutral control. However, I am underpowered to examine three conditions, and the original effect was only found between the responsive and unresponsive conditions.]: responsive or unresponsive partner. In the responsive (vs. unresponsive) condition, participants are asked to describe 2 (vs. 10) kind or considerate things their partner had done for them in the past week. It is generally easy to think of 2 such examples and harder to think of 10; this relative availability primes confidence or doubt in one's partner's responsiveness. Then participants will complete 16 trials of the global-local visual orientation task (see example image below). Finally, participants will complete the 20-item PANAS measure of mood, a potential confounding variable. I expect the study to be programmable in Qualtrics and to take no longer than 10 minutes per participant.
 
 <center>
-![Fig. 1, Reis et al. (2018), p. 30](/Users/catherinegarton/Documents/Grad School/Class and admin/reis2018/images/global_local.png){width=50%}
+![Fig. 1, Reis et al. (2018), p. 30](/Users/catherinegarton/Documents/Grad School/Class and admin/251/reis2018/images/global_local.png){width=50%}
 </center>
 
 ```{r, echo=FALSE}
@@ -42,3 +42,87 @@ View the project repository on Github: [Psych 251 repo](https://github.com/psych
 View the original paper: [Reis et al., 2018](https://github.com/psych251/reis2018/blob/main/original_paper/Reis_et_al_2018.pdf){target="_blank"}
 
 ***
+
+##Methods
+
+###Power Analysis
+
+TBD
+
+###Planned Sample
+
+Using the recruitment platform Prolific, I will recruit adults (*n* = TBD, based on power analysis) who report to be cohabiting with a romantic partner. I will terminate data collection whewn I have reached the predetermined sample size, as indicated by my power analysis. There are no other pre-selection rules.
+
+To mimic the original study exactly, the study title will advertised as “relationships and perception”.
+
+###Materials
+
+All materials - can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
+
+###Procedure	
+
+The original procedure for the responsive and unresponsive conditions will be followed exactly: "To prime responsiveness, in the responsive condition, participants were asked to describe “2 kind or considerate things your relationship partner has done to help you in the past 7 days.” In the unresponsive condition, participants were asked to describe “10 kind or considerate things your relationship partner has done to help you in the past 7 days.”" (Reis et al., 2018, p. XX) Unlike the original study, we will not include a 3rd neutral control condition.
+
+Global-local processing task:
+We employed a 16-trial version of the global-local visual orientation task developed by Kimchi and Palmer (1982) and used in prior research (e.g., Gasper & Clore, 2002). On each trial, participants were shown a creen with a geometric shape (composed of triangles or squares) on top and beneath this single shape, two images containing multiple shapes. The participant is asked to judge whether the single shape is more si- milar to the lower-right or lower-left image. (Fig. 1 shows a sample trial.) The pattern of one of these images was identical to the standard, but its 3 or 4 constituent elements differed. The pattern of the other image differed from the standard, but its constituent elements were identical. Thus, if participants said that the standard was more similar to the former image, they were scored as using global processing; if they said that the standard was more similar to the latter image, they were scored as using local processing. Across trials, the right-left position of the global-local option was counterbalanced, as was the shape asso- ciated with each option.
+Following the visual orientation task, participants were asked to report their current mood, using a 20-item version of the PANAS (Watson, Clark, & Tellegen, 1988), with 1 (not at all) to 7 (a great deal) scales. A total mood score was created by taking the mean of positive items and subtracting the mean of negative items. The PANAS was followed by the same inattention measure used in Study 3.
+
+Following the hindsight item, participants were given an instruc- tional manipulation check, adapted from Oppenheimer, Meyvis, and Davidenko (2009). In this item, participants were shown a list of 10 sporting activities and an Other category, each with a square checkoff button next to it. The instructions we used asked them to check “Other” and type “I read the instructions” in the space provided. Checking any of the sporting activities was considered an inattentive response.
+
+###Analysis Plan
+
+Data cleaning.
+
+The key analysis will be performing a between-subjects t-test on the global-processing mean scores between the responsive and unresponsive conditions. A significant mean difference, such that the responsive condition has higher global processing scores, would replicate the original finding. If a significant difference is found, I am interested to see if the magnitude of the effect size will be similar.
+
+Post hoc Fisher's Least Significant Difference tests indicated that participants in the responsive condition showed a significantly more global focus than participants in the unresponsive condition (p = .001)
+
+Study 5: "Prior to analysis, data from 232 participants (30.8%) were deleted from the analytic sample (230 for failing the attention check, 5 for leaving the manipulation items blank, 2 for skipping more than half of the trials, and 1 for choosing the same response on all 16 trials; a few individuals were dropped for more than one reason)."
+
+**Clarify key analysis of interest here**  
+Additional analyses include controlling for mood, which the authors did as well. 
+I will also rerun all analyses without any data exclusions, as I perceive the authors' data exclusions to be a bit liberal.
+
+###Differences from Original Study
+
+In the original study, participants were not compensated for participating, whereas in this replication attempt, participants will be compensated monetarily. Additionally, in this replication, we drop the 3rd condition (the neutral control), so we are only examining the difference between responsive and unresponsive conditions, rather than replicating the ANOVA between all three. These differences are not expected to make a difference in the effect of interest, because XXX.
+
+### Methods Addendum (Post Data Collection)
+
+TBD.
+
+#### Actual Sample
+  TBD.
+
+#### Differences from pre-data collection methods plan
+  TBD.
+
+
+##Results
+
+
+### Data preparation
+
+Data preparation following the analysis plan.
+	
+```{r include=F}
+###Data Preparation
+
+####Load Relevant Libraries and Functions
+
+####Import data
+
+#### Data exclusion / filtering
+
+#### Prepare data for analysis - create columns etc.
+```
+
+### Confirmatory analysis
+
+The analyses as specified in the analysis plan.  
+
+*Side-by-side graph with original graph is ideal here*
+
+###Exploratory analyses
+
+Any follow-up analyses desired (not required). 
