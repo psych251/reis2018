@@ -15,26 +15,21 @@ output:
 ## Introduction
 
 ### Background
-Reis and colleagues (2018) reported a series of experiments that examine the interpersonal influences on intellectual humility (IH)^[IH can be thought of as the awareness of one's epistemic limitations, i.e., to what extent you understand that your beliefs might be wrong or may change in the future.]. IH is typically construed as a stable cognitive trait. However, the authors hypothesized that priming the social cue of partner responsiveness would boost IH, because feeling understood may decrease people's propensity for self-enhancement and allow them to respond to their environment more openly. Study 5, which I will attempt to replicate, finds that priming partner responsiveness promotes a broader cognitive perspective (as measured in a global-local visual orientation task).
+Reis and colleagues (2018) reported a series of experiments that examine the interpersonal influences on intellectual humility (IH)^[IH can be thought of as the awareness of one's epistemic limitations, i.e., to what extent you understand that your beliefs might be wrong or may change in the future.]. The authors hypothesized that priming the social cue of partner responsiveness would boost IH, because feeling understood may decrease people's propensity for self-enhancement and allow them to respond to their environment more openly. Study 5, which I will attempt to replicate, finds that priming partner responsiveness promotes a broader cognitive perspective (as measured in a global-local visual orientation task). The authors imply that a broader perspective may be the cognitive underpinnings of intellectual humility.
 
 ### Justification
 Intellectual humility has been the backbone of my research interests. The affective roots of IH are incredibly understudied, and I am hoping to explore the roles of threat and competition (vs. psychological safety and trust) in enabling intellectual humility about morally divisive or identity-based beliefs. This is the most relevant paper in the extant literature, because it provides preliminary evidence that feelings of safety and support increase cognitive openness.
 
 ### Stimuli and procedures
-Participants will be recruited from Prolific and randomized to one of two conditions^[Note that this differs from the original study, in which there was also a neutral control. However, I am underpowered to examine three conditions, and the original effect was only found between the responsive and unresponsive conditions.]: responsive or unresponsive partner. In the responsive (vs. unresponsive) condition, participants are asked to describe 2 (vs. 10) kind or considerate things their partner had done for them in the past week. It is generally easy to think of 2 such examples and harder to think of 10; this relative availability primes confidence or doubt in one's partner's responsiveness. Then participants will complete 16 trials of the global-local visual orientation task (see example image below). Finally, participants will complete the 20-item PANAS measure of mood, a potential confounding variable. I expect the study to be programmable in Qualtrics and to take no longer than 10 minutes per participant.
+Participants will be recruited from Prolific and randomized to one of two conditions^[Note that this differs from the original study, in which there was also a neutral control. However, I am underpowered to examine three conditions, and the original effect was only found between the responsive and unresponsive conditions.]: responsive or unresponsive partner. In the responsive (vs. unresponsive) condition, participants are asked to describe 2 (vs. 10) kind or considerate things their partner had done for them in the past week. It is generally easy to think of 2 such examples and harder to think of 10; this relative availability primes confidence or doubt in one's partner's responsiveness. Then participants will complete 16 trials of the global-local visual orientation task (see example image below). Finally, participants will complete the 20-item PANAS measure of mood, a potential confounding variable. I expect the study to be programmable in Qualtrics and to take no longer than 8 minutes per participant.
 
 <center>
 ![Fig. 1, Reis et al. (2018), p. 30](/Users/catherinegarton/Documents/Grad School/Class and admin/251/reis2018/images/global_local.png){width=50%}
 </center>
 
-```{r, echo=FALSE}
-# I struggled with embedding this image. None of my relative file paths worked. I still need to figure out a better way of linking the image.
-
-```
 
 ### Anticipated challenges
-* Reaching appropriate power. The authors recruited 225 participants per condition (for a target of 188 after deletions) based on expected effect sizes. I may not have enough funding for 550 participants to take an 8-10 minute survey. (Update: I will re-assess this potential challenge after completing the power analysis.)
-* Acquiring images for the global-local visual orientation task. I may need to contact the authors to obtain the images if I cannot obtain the high-quality files from public materials.
+* Appropriate power. The authors recruited 225 participants per condition, for a target of 188 after deletions, based on expected effect sizes. In a post-hoc power analysis (based on the magnitude of the effect the authors found, assuming no bias in the estimate), their sample size afforded 99% power. Given the budget for this class, I propose a sample of 180 participants (90 per condition), which would provide only 80% power for an effect size of the same magnitude, **d** = .37.^[This also expects that 15% of my sample will fail the attention check. In the original study, 30% of the sample failed the attention check.]
 
 ### Links
 View the project repository on Github: [Psych 251 repo](https://github.com/psych251/reis2018){target="_blank"}
@@ -49,14 +44,15 @@ View the replication survey: [Qualtrics](https://stanforduniversity.qualtrics.co
 
 ### Power Analysis
 
-TBD
+I used G*power to conduct a power analysis for a between-subjects, unpooled, one-tailed(two-tailed) t-test. Given the original effect size, I would need 180(228) participants to have 80% power to detect the effect at alpha = .05. I expect a significant number of participants to fail the attention check, so with 15% buffer for exclusions, I aim for a target sample of 212(269).
 
 ### Planned Sample
 
-Using Prolific, I will recruit English-speaking adults (*n* = TBD, based on power analysis). I will terminate data collection when I have reached the predetermined sample size, as indicated by my power analysis. There are no other pre-selection rules.
+Using Prolific, I will recruit English-speaking adults (*n* = 212). I will terminate data collection when I have reached this predetermined sample size, as indicated by my power analysis. There are no other pre-selection rules.
 
 ### Materials
-Participants will view and select geometric images as part of a 16-trial global-local visual orientation task originally developed by Kimchi & Palmer (1982). Survey materials and images can be found on the [Harvard Dataverse](https://dataverse.harvard.edu/privateurl.xhtml?token=f8d2d590-6a8e-4df2-9dca-7e3f3813c78c). 
+
+Participants will complete a survey hosted by Qualtrics. They will view and select geometric images as part of a 16-trial global-local visual orientation task originally developed by Kimchi & Palmer (1982). Survey materials and images can be found on the [Harvard Dataverse](https://dataverse.harvard.edu/privateurl.xhtml?token=f8d2d590-6a8e-4df2-9dca-7e3f3813c78c). 
 
 ### Procedure	
 
@@ -96,32 +92,29 @@ Data will be excluded from analysis if any of the following criteria apply (acco
 #### Data processing
 The independent variable, perceived responsiveness, will be captured by Qualtrics embedded data according to participants' randomized condition.
 
-The dependent variable, cognitive broadening, will be calculated by summing the number of trials of which participants selected the "global processing" image (i.e., the image with pattern similarity rather than constituent-shape similarity). An alternative measure will be calculated by using the proportion of *completed* trials that reflect global processing, which will more accurately account for skipped trials.
+The dependent variable, cognitive broadening, will be calculated by summing the number of trials of which participants selected the "global processing" image (i.e., the image with pattern similarity rather than constituent-shape similarity). 
+Note: Based on a reproducibility analysis I completed using the authors' public data, I determined that the authors first summed global processing scores within the first 8 trials (which contain small figures containing 3-4 blocks each) and within the last 8 trials (which contain large figures containing 9-10 blocks each). Within each of these sets, they interpolated any NA values by calculating the mean likelihood of a global-processing choice for the completed trials and substituting that value for the missing trial(s). They then summed the small-figure trials and large-figure trials to create a composite global processing score, which was used for the ANOVA. I will follow the authors' analytic choices to preserve the consistency of the replication.
 
 A current mood score will be created by subtracting the mean score across negative items from the mean score across positive items. 
 
 ### Key analysis
-The key analysis is a between-subjects pooled t-test on the global-processing mean scores between the responsive and unresponsive conditions. A significant mean difference, such that the responsive condition has higher global processing scores, would replicate the original finding. If a significant difference is found, I am also interested to see if the magnitude of the effect size is similar.
+The key analysis is a between-subjects unpaired t-test on the global-processing mean scores between the responsive and unresponsive conditions. A significant mean difference, such that the responsive condition has higher global processing scores, would replicate the original finding. If a significant difference is found, I am also interested to see if the magnitude of the effect size is similar.
 
 #### Additional analyses
 Additional analyses will see if the effect persists after controlling for mood, as well as test for an interaction with participant sex, to see if the authors' other primary findings replicate.
+
 For my own curiosity, I will also rerun all analyses without any data exclusions, as I perceive the authors' data exclusions to be a bit liberal!
 
+Because the original dataset is public, I will also run a t-test between conditions in their data and compare my findings to that re-analysis (which more closely matches my statistical test).
+
 ### Differences from Original Study
-1. In the original study, participants were not compensated for participating, whereas in this replication attempt, participants will be compensated monetarily. This is not expected to make a difference in the effect of interest. While participants might be differently motivated, this should not bias the effect in a particular direction.
+1. In the original study, participants were not compensated for participating, whereas in this replication attempt, participants will be compensated monetarily. I do not expect this to make a difference in the effect of interest. While participants might be differently motivated, this should not bias the effect in a particular direction.
 
-2. This replication attempt is underpowered to support a 3rd condition (the neutral control), so it will only examine the difference between the responsive and unresponsive conditions, rather than conducting an ANOVA between all three. This will make a difference in the computation of the effect, given that I will end up conducting a t-test (which uses pooled variance from two groups) rather than the authors' post-hoc Fisher's LSD test (which would use the pooled variance from all three).
+2. This replication attempt is underpowered to support a 3rd condition (the neutral control), so it will only examine the difference between the responsive and unresponsive conditions, rather than conducting an ANOVA between all three. This will make a difference in the computation of the effect, given that I will end up conducting a t-test (using the independent variance from two groups) rather than the authors' post-hoc Fisher's LSD test (which would use the pooled variance from all three). However, I will conduct the same statistical test on the authors' original data and also compare my results to that.
 
-3. The authors included four additional questions^[These questions were: how often participants chose shapes based on constituent similarity, how often participants chose shapes based on pattern similarity, how difficult the relationship recall task was, and whether the participant had completed a similar relationship recall task before.] in their survey materials, which were not mentioned in the published article or included in the published analyses. These items are not part of the specific effect I am planning to replicate, so I am excluding them from the survey for the sake of time. Because these measures were collected after both the manipulation and DV task, they are not expected to make a difference in the effect of interest.
+3. The authors included some additional questions^[These questions were: how often participants chose shapes based on constituent similarity and how often participants chose shapes based on pattern similarity.] in their survey materials, which were not included in the published analyses. These items are not part of the specific effect I am planning to replicate, so I am excluding them from the survey for the sake of time. Because these measures were collected after both the manipulation and DV task, I do not expect them to make a difference in the effect of interest.
 
-4. Depending on what Mike/the TAs think, I would prefer to use a different attention check. The authors had to exclude 1/3rd of their sample(!) for failing it, and this might leave me substantially underpowered. A consideration is that this change could impact the effect if there is something different about the people who would fail the authors' attention check but not a different one. This may be the case, given that the authors' attention check requires careful reading of a long block of text and might inadvertently favor people with focal visual orientation.
-
-```{r notes to self, include=FALSE}
-#NOTE: edit this for new attention check.
-#NOTE: ask about forced choice
-#NOTE: not mobile friendly yet
-#NOTE: remove trial_17 from analysis!
-```
+4. I decided to use a different attention check that is less deceptive and more respectful to participants. This would only impact the effect of interest if mine or the authors' original attention check selectively excluded participants from one condition more than the other. I do not know if this was the case for the original study (in which case I would argue that the current attention check is a more valid test of the hypothesis), but I will confirm in my sample that roughly equal numbers of participants were excluded from each condition. Additionally, the original authors have access to my re-implementation and will have the opportunity to comment on the attention check. 
 
 ### Methods Addendum (Post Data Collection)
 
@@ -136,7 +129,7 @@ TBD.
 
 ## Results
 
-Note: I've included the analysis code below, which runs smoothly on the data. However, I haven't written any interpretation of these results yet, because the current data was randomly generated by non-naive participants and isn't meaningful.
+Note: I've included the analysis code below, which runs smoothly on the data. However, I haven't written any interpretation of these results yet, because the current data was randomly generated by non-naive participants and aren't meaningful.
 
 ### Data preparation
 	
@@ -145,55 +138,100 @@ Note: I've included the analysis code below, which runs smoothly on the data. Ho
 ####Load Relevant Libraries and Functions
 library(here)
 
+
 ```
 
-```{r warning=FALSE}
+Reproducing author results:
+```{r Reproducing author results, warning=FALSE}
 
 ####Load Relevant Libraries and Functions
 library(tidyverse)
+library(haven)
+
+#Reproducing original author analysis
+authordata <- read_sav(here("data/original_authordata/study5.sav"))
+
+m <- aov(Globaltotal_total ~ Conditions, data = authordata)
+summary(m) # same test statistics
+
+authordata %>% 
+  group_by(condition) %>% 
+  summarize(mean = mean(Globaltotal_total),
+            sd = sd(Globaltotal_total)) # same means
+
+#Determining test statistic if I conduct a t-test between  conditions of interest in the authors' original data
+authordata_subset <- subset(authordata, Conditions != "Control")
+t.test(Globaltotal_total ~ Conditions, authordata_subset)
+
 
 ```
 
-```{r, warning=F}
+Importing my replication data:
+```{r, Import raw data, warning=F}
 
 ####Import data
-rawdata <- read_csv(here("data/rawdata/10-30-22.csv"))
+df_names <- read_csv(here("data/rawdata/11-20-22.csv"), n_max=0) %>% names()
 
-###Data Preparation
-rawdata <- rawdata[-(1:2),] # removing duplicate header rows that Qualtrics provides
+rawdata <- read_csv(here("data/rawdata/11-20-22.csv"), 
+                    col_names = df_names,
+                    col_types = "d",
+                    skip = 3)
 
+```
+
+Cleaning the data:
+```{r Data cleaning}
 #### Data exclusion / filtering
+
+skipped.morethan.8 <- function(row){
+    ifelse(sum(is.na(row))>=8, 1,0)
+}   
+
+same.response.16 <- function(row){
+  ifelse(sum(row)==16 | sum(row)==0, 1,0)
+}
+
+rawdata$exclude_skipped <- apply(select(rawdata, starts_with("trial_")),MARGIN=1, FUN=skipped.morethan.8)  
+
+rawdata$exclude_sameresponse <- apply(select(rawdata, starts_with("trial_")),MARGIN=1, FUN=same.response.16)  
+
+
 cleandata <- rawdata %>% 
-  filter(Finished == 1 & attn_check_fruit == 1) %>% 
-  select(
-    -c(2:4, 7:22, 24, 26:29, 31)
-  ) %>% 
-  rename(duration = "Duration (in seconds)")
+  filter(Finished == 1 & attn_check_fruit == 1 & exclude_skipped == 0 & exclude_sameresponse==0)
 
-cleandata[,c(2, 8:46)] <- sapply(cleandata[,c(2, 8:46)], as.numeric)
-cleandata[,"condition"] <- as.factor(cleandata$condition)
-cleandata[,"gender"] <- as.factor(cleandata$gender)
-cleandata[,"prior_knowledge_rrt"] <- as.factor(cleandata$prior_knowledge_rrt)
-cleandata[,"prior_knowledge_pt"] <- as.factor(cleandata$prior_knowledge_pt)
+cleandata$condition <- as.factor(cleandata$condition)
+cleandata$gender <- as.factor(cleandata$gender)
+cleandata$prior_knowledge_rrt <- as.factor(cleandata$prior_knowledge_rrt)
+cleandata$prior_knowledge_pt <- as.factor(cleandata$prior_knowledge_pt)
 
-# no one left more than half of the trials blank, skipped the recall task, or chose the same response on all 16 trials
+    
+# manually filter out anyone who skipped the recall task 
 
-  # manipulation check: difficulty of relationship recall task by condition
-  test <- cleandata %>% select(c("condition", "difficulty", "difficulty_1")) %>% 
-    unite("manip_check", c(difficulty, difficulty_1), na.rm=TRUE)
-  
-  t.test(as.numeric(manip_check) ~ condition, test)
+```
 
+Creating variables for analysis:
+```{r Creating usable data}
+#### Creating NA imputation function
+na.mean <- function(row){
+    replace(row,is.na(row)==T,mean(row, na.rm=T))
+}
+
+#### Imputing NA values for small and large trials
+
+cleandata[,c(names(select(cleandata, starts_with("trial_sm"))))] <- sapply(cleandata[,c(names(select(cleandata, starts_with("trial_sm"))))], na.mean)
+
+cleandata[,c(names(select(cleandata, starts_with("trial_lg"))))] <- sapply(cleandata[,c(names(select(cleandata, starts_with("trial_lg"))))], na.mean)
 
 #### Prepare data for analysis - create columns etc.
 data <- cleandata %>% 
-  mutate(global_sum = rowSums(select(cleandata, starts_with("trial_")), na.rm = TRUE)) %>% 
-  mutate(global_prop = rowMeans(select(cleandata, starts_with("trial_")), na.rm = TRUE)) %>% 
+  mutate(global_small = rowSums(select(cleandata, starts_with("trial_sm")), na.rm = TRUE)) %>% 
+  mutate(global_large = rowSums(select(cleandata, starts_with("trial_lg")), na.rm = TRUE)) %>% 
+  mutate(global_total = global_small + global_large) %>% 
   mutate(positive = rowMeans(cleandata[,c("panas_1", "panas_3", "panas_5", "panas_9", "panas_10", "panas_12", "panas_14", "panas_16", "panas_17", "panas_19")])) %>% 
   mutate(negative = rowMeans(cleandata[,c("panas_2", "panas_4", "panas_6", "panas_7", "panas_8", "panas_11", "panas_13", "panas_15", "panas_18", "panas_20")])) %>% 
   mutate(mood = positive - negative) %>% 
-  unite("partner", c(partner_type, partner_type_1), na.rm=TRUE) %>%
-  select(c("condition", "global_sum", "global_prop", "mood", "gender", "partner", "prior_knowledge_rrt", "prior_knowledge_pt", "attn_check_figure"))
+  unite("partner", c(partner_type_u, partner_type_r), na.rm=TRUE) %>%
+  select(c("condition", "global_small", "global_large", "global_total", "mood", "gender", "partner", "prior_knowledge_rrt", "prior_knowledge_pt", "device"))
 
 ```
 
@@ -201,17 +239,20 @@ data <- cleandata %>%
 
 ```{r}
 
-t.test(global_sum ~ condition, data)
-t.test(global_prop ~ condition, data)
+t.test(global_total ~ condition, data)
 
-plot(global_prop ~ condition, data = data,
-        ylab = "global choice (prop. of trials)",
+plot(global_total ~ condition, data = data,
+        ylab = "global choice (number of trials)",
         main = "Global orientation by condition")
 
 table <- data %>% 
   group_by(condition) %>% 
-  summarize(global = mean(global_sum), sd = sd(global_sum, na.rm=T), n = n())
-table
+  summarize(global = mean(global_total), sd = round(sd(global_total, na.rm=T),2), n = n())
+
+table %>% 
+  t() %>% 
+  as.data.frame()
+  
 
 ```
 
@@ -224,7 +265,9 @@ Compare to original table:
 
 ```{r }
 
-summary(lm(global_prop ~ condition*mood, data))
-summary(lm(global_prop ~ condition*gender, data))
+summary(lm(global_total ~ condition*mood, data))
+summary(lm(global_total ~ condition*gender, data))
+summary(lm(global_total ~ condition*partner, data))
+summary(lm(global_total ~ condition*device, data))
 
 ```
