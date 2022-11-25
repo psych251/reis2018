@@ -103,7 +103,7 @@ The key analysis is a between-subjects unpaired t-test on the global-processing 
 #### Additional analyses
 Additional analyses will see if the effect persists after controlling for mood, as well as test for an interaction with participant sex, to see if the authors' other primary findings replicate.
 
-For my own curiosity, I will also rerun all analyses without any data exclusions, as I perceive the authors' data exclusions to be a bit liberal!
+For my own curiosity, I will also rerun all analyses without any data exclusions, as the original exclusions were substantial. 
 
 Because the original dataset is public, I will also run a t-test between conditions in their data and compare my findings to that re-analysis (which more closely matches my statistical test).
 
@@ -112,9 +112,9 @@ Because the original dataset is public, I will also run a t-test between conditi
 
 2. This replication attempt is underpowered to support a 3rd condition (the neutral control), so it will only examine the difference between the responsive and unresponsive conditions, rather than conducting an ANOVA between all three. This will make a difference in the computation of the effect, given that I will end up conducting a t-test (using the independent variance from two groups) rather than the authors' post-hoc Fisher's LSD test (which would use the pooled variance from all three). However, I will conduct the same statistical test on the authors' original data and also compare my results to that.
 
-3. The authors included some additional questions^[These questions were: how often participants chose shapes based on constituent similarity and how often participants chose shapes based on pattern similarity.] in their survey materials, which were not included in the published analyses. These items are not part of the specific effect I am planning to replicate, so I am excluding them from the survey for the sake of time. Because these measures were collected after both the manipulation and DV task, I do not expect them to make a difference in the effect of interest.
+3. The authors included some additional questions^[These questions were: how often participants chose shapes based on constituent similarity and how often participants chose shapes based on pattern similarity.] in their survey materials. These items are not part of the specific effect I am planning to replicate, so I am excluding them from the survey for the sake of time. Because these measures were collected after both the manipulation and DV task, I do not expect them to make a difference in the effect of interest.
 
-4. I decided to use a different attention check that is less deceptive and more respectful to participants. This would only impact the effect of interest if mine or the authors' original attention check selectively excluded participants from one condition more than the other. I do not know if this was the case for the original study (in which case I would argue that the current attention check is a more valid test of the hypothesis), but I will confirm in my sample that roughly equal numbers of participants were excluded from each condition. Additionally, the original authors have access to my re-implementation and will have the opportunity to comment on the attention check. 
+4. I decided to use a different attention check that is more straightforward and may be perceived less like we are trying to 'trick' or 'catch' participants. This change would only impact the effect of interest if mine or the authors' original attention check selectively excluded participants from one condition more than the other. I do not know if this was the case for the original study (in which case I would argue that the current attention check is a more valid test of the hypothesis), but I will confirm in my sample that roughly equal numbers of participants were excluded from each condition. 
 
 ### Methods Addendum (Post Data Collection)
 
