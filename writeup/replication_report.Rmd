@@ -44,7 +44,7 @@ View the replication survey: [Qualtrics](https://stanforduniversity.qualtrics.co
 
 ### Power Analysis
 
-I used G*power to conduct a power analysis for a between-subjects, unpooled, one-tailed(two-tailed) t-test. Given the original effect size, I would need 180(228) participants to have 80% power to detect the effect at alpha = .05. I expect a significant number of participants to fail the attention check, so with 15% buffer for exclusions, I aim for a target sample of 212(269).
+I used G*power to conduct a power analysis for a between-subjects, unpooled, one-tailed t-test. Given the original effect size, I would need 180 participants to have 80% power to detect the effect at alpha = .05. I expect a significant number of participants to fail the attention check, so with 15% buffer for exclusions, I aim for a target sample of 212.
 
 ### Planned Sample
 
