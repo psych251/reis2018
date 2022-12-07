@@ -29,7 +29,7 @@ Participants will be recruited from Prolific and randomized to one of two condit
 
 
 ### Anticipated challenges
-* Appropriate power. The authors recruited 225 participants per condition, for a target of 188 after deletions, based on expected effect sizes. In a post-hoc power analysis (based on the magnitude of the effect the authors found, assuming no bias in the estimate), their sample size afforded 99% power. Given the budget for this class, I propose a sample of 180 participants (90 per condition), which would provide only 80% power for an effect size of the same magnitude, **d** = .37.^[This also expects that 15% of my sample will fail the attention check. In the original study, 30% of the sample failed the attention check.]
+* Appropriate power. The authors recruited 225 participants per condition, for a target of 188 after deletions, based on expected effect sizes. In a post-hoc power analysis (based on the magnitude of the effect the authors found, assuming no bias in the estimate), their sample size afforded 99% power. Given the budget for this class, I proposed a target sample of 180 participants after exclusions^[I will account for a 15% buffer for exlusions] (90 per condition), which would provide 80% power for an effect size of the same magnitude, **d** = .37.
 
 ### Links
 View the project repository on Github: [Psych 251 repo](https://github.com/psych251/reis2018){target="_blank"}
@@ -44,7 +44,7 @@ View the replication survey: [Qualtrics](https://stanforduniversity.qualtrics.co
 
 ### Power Analysis
 
-I used G*power to conduct a power analysis for a between-subjects, unpooled, one-tailed t-test. Given the original effect size, I would need 180 participants to have 80% power to detect the effect at alpha = .05. I expect a significant number of participants to fail the attention check, so with 15% buffer for exclusions, I aim for a target sample of 212.
+I used G*power to conduct a power analysis for a between-subjects, unpooled, one-tailed t-test. Given the original effect size, I would need 180 participants to have 80% power to detect the effect at alpha = .05. I expect a significant number of participants to fail the attention check, so with 15% buffer for exclusions, I aim to recruit 212 participants.
 
 ### Planned Sample
 
@@ -59,13 +59,7 @@ Participants will complete a survey hosted by Qualtrics. They will view and sele
 To mimic the original study exactly, the study title will advertised as “relationships and perception”. Individuals who enroll in the study on Prolific will be redirected to a Qualtrics survey, where they will provide informed consent before continuing:
 
 **1. Manipulation**:
-Participants will first complete a writing prompt based on one of two randomized conditions. I will follow the original authors' procedure for the responsive (unresponsive) conditions:
-
-> For the first part of the questionnaire, we are interested in how people think about their relationships and the world around them.
->
-> Please complete this question in regard to **your romantic relationship partner** if you are **currently involved in a romantic relationship**, or in regard to a **close friend** if you are **not currently involved in a romantic relationship.**
->
-> Please describe **2 (10) kind or considerate** things your relationship partner has done to help you **in the last 7 days.** 
+Participants will first complete a writing prompt based on one of two randomized conditions. I will follow the original authors' procedure for the responsive (unresponsive) conditions by asking, "Please describe **2 (10) kind or considerate** things your partner has done to help you **in the last 7 days.**" Participants are then given 2 (10) short-answer text boxes to fill in their answers. Note that participants are instructed to complete the question about a close friend if they are not currently in a romantic relationship. 
 
 **2. Global-local visual orientation task** (following Reis & colleagues' protocol exactly):
 
@@ -92,25 +86,25 @@ Data will be excluded from analysis if any of the following criteria apply (acco
 #### Data processing
 The independent variable, perceived responsiveness, will be captured by Qualtrics embedded data according to participants' randomized condition.
 
-The dependent variable, cognitive broadening, will be calculated by summing the number of trials of which participants selected the "global processing" image (i.e., the image with pattern similarity rather than constituent-shape similarity). 
-Note: Based on a reproducibility analysis I completed using the authors' public data, I determined that the authors first summed global processing scores within the first 8 trials (which contain small figures containing 3-4 blocks each) and within the last 8 trials (which contain large figures containing 9-10 blocks each). Within each of these sets, they interpolated any NA values by calculating the mean likelihood of a global-processing choice for the completed trials and substituting that value for the missing trial(s). They then summed the small-figure trials and large-figure trials to create a composite global processing score, which was used for the ANOVA. I will follow the authors' analytic choices to preserve the consistency of the replication.
+The dependent variable, cognitive broadening, will be calculated by summing the number of trials of which participants selected the "global processing" image (i.e., the image with pattern-based similarity rather than constituent-shape similarity). 
+Note: Based on a reproducibility analysis I completed with the authors' public data, I determined that the authors first summed global processing scores within the first 8 trials (which contain small figures containing 3-4 blocks each) and within the last 8 trials (which contain large figures containing 9-10 blocks each). Within each of these sets, they interpolated any NA values by calculating the mean likelihood of a global-processing choice for the completed trials and substituting that value for the missing trial(s). They then summed the small-figure trials and large-figure trials to create a composite global processing score, which was used for the ANOVA. I will follow the authors' analytic choices to preserve the consistency of the replication.
 
 A current mood score will be created by subtracting the mean score across negative items from the mean score across positive items. 
 
 ### Key analysis
-The key analysis is a between-subjects unpaired t-test on the global-processing mean scores between the responsive and unresponsive conditions. A significant mean difference, such that the responsive condition has higher global processing scores, would replicate the original finding. If a significant difference is found, I am also interested to see if the magnitude of the effect size is similar.
+The key analysis is a between-subjects unpaired t-test on the global-processing mean scores between the responsive and unresponsive conditions. A significant mean difference, such that the responsive condition shows a higher global processing score, would replicate the original finding. If a significant difference is found, I am also interested to see if the magnitude of the effect size is similar.
 
 #### Additional analyses
 Additional analyses will see if the effect persists after controlling for mood, as well as test for an interaction with participant sex, to see if the authors' other primary findings replicate.
 
 For my own curiosity, I will also rerun all analyses without any data exclusions, as the original exclusions were substantial. 
 
-Because the original dataset is public, I will also run a t-test between conditions in their data and compare my findings to that re-analysis (which more closely matches my statistical test).
+Because the original dataset is public, I will also run a t-test between conditions in their data and compare my findings to that re-analysis (which more closely matches the statistical test I will be using).
 
 ### Differences from Original Study
 1. In the original study, participants were not compensated for participating, whereas in this replication attempt, participants will be compensated monetarily. I do not expect this to make a difference in the effect of interest. While participants might be differently motivated, this should not bias the effect in a particular direction.
 
-2. This replication attempt is underpowered to support a 3rd condition (the neutral control), so it will only examine the difference between the responsive and unresponsive conditions, rather than conducting an ANOVA between all three. This will make a difference in the computation of the effect, given that I will end up conducting a t-test (using the independent variance from two groups) rather than the authors' post-hoc Fisher's LSD test (which would use the pooled variance from all three). However, I will conduct the same statistical test on the authors' original data and also compare my results to that.
+2. This replication attempt is underpowered to support a 3rd condition (the neutral control), so it will only examine the difference between the responsive and unresponsive conditions, rather than conducting an ANOVA between all three. This will make a difference in the computation of the effect, given that I will end up conducting a t-test (using the independent variance from two groups) rather than the authors' post-hoc Fisher's LSD test (which would use the pooled variance from all three). However, I will also conduct the same statistical test on the authors' original data and compare my results to that as well.
 
 3. The authors included some additional questions^[These questions were: how often participants chose shapes based on constituent similarity and how often participants chose shapes based on pattern similarity.] in their survey materials. These items are not part of the specific effect I am planning to replicate, so I am excluding them from the survey for the sake of time. Because these measures were collected after both the manipulation and DV task, I do not expect them to make a difference in the effect of interest.
 
@@ -118,18 +112,16 @@ Because the original dataset is public, I will also run a t-test between conditi
 
 ### Methods Addendum (Post Data Collection)
 
-TBD.
-
 #### Actual Sample
-  TBD.
+
+I recruited 212 English-speaking adults on Prolific. After exclusions, I was left with 208 participants for analysis. Consistent with Reis et al. (2018), the only demographic we collected was gender: Our sample composed of 40.9% male, 56.3% female, and 2.8% non-binary.
+
 
 #### Differences from pre-data collection methods plan
-  TBD.
+Before launching the survey, the original authors advised me that they had randomized the global-local processing trials. I updated my reimplementation accordingly. Unfortunately, by adding randomization to each question of the task, Qualtrics eliminated the page breaks I had placed between trials. This means that all trials were presented on the same page. Additionally, since questions had been designed to auto-advance, after selecting their first answer participants got a warning message asking if they wanted to proceed to the next page despite skipping 15 questions, or stay on the page and answer the rest. We still received complete data from almost all participants, so it seems like most people made it through this step. However, the task may have been more confusing to participants than we intended for this reason.
 
 
 ## Results
-
-Note: I've included the analysis code below, which runs smoothly on the data. However, I haven't written any interpretation of these results yet, because the current data was randomly generated by non-naive participants and aren't meaningful.
 
 ### Data preparation
 	
@@ -138,10 +130,11 @@ Note: I've included the analysis code below, which runs smoothly on the data. Ho
 ####Load Relevant Libraries and Functions
 library(here)
 
-
 ```
 
-Reproducing author results:
+===Reproducing author results===
+
+First, I will reproduce the authors' results from their public data, and I will run a t-test between the responsive and unresponsive conditions so that I have a directly comparable statistical test. I was able to reproduce the same means and test statistics as the original article. I also computed a t-test, resulting in a value of p = .0006, t(337.82) = 3.46.
 ```{r Reproducing author results, warning=FALSE}
 
 ####Load Relevant Libraries and Functions
@@ -152,12 +145,12 @@ library(haven)
 authordata <- read_sav(here("data/original_authordata/study5.sav"))
 
 m <- aov(Globaltotal_total ~ Conditions, data = authordata)
-summary(m) # same test statistics
+summary(m) 
 
 authordata %>% 
   group_by(condition) %>% 
   summarize(mean = mean(Globaltotal_total),
-            sd = sd(Globaltotal_total)) # same means
+            sd = sd(Globaltotal_total)) 
 
 #Determining test statistic if I conduct a t-test between  conditions of interest in the authors' original data
 authordata_subset <- subset(authordata, Conditions != "Control")
@@ -166,20 +159,24 @@ t.test(Globaltotal_total ~ Conditions, authordata_subset)
 
 ```
 
-Importing my replication data:
+===Importing new raw data===
+
+Next I will turn to the analysis of my replication data.
 ```{r, Import raw data, warning=F}
 
 ####Import data
-df_names <- read_csv(here("data/rawdata/11-20-22.csv"), n_max=0) %>% names()
+df_names <- read_csv(here("data/rawdata/rawdata.csv"), n_max=0) %>% names()
 
-rawdata <- read_csv(here("data/rawdata/11-20-22.csv"), 
+rawdata <- read_csv(here("data/rawdata/rawdata.csv"), 
                     col_names = df_names,
                     col_types = "d",
                     skip = 3)
 
 ```
 
-Cleaning the data:
+===Cleaning the data===
+
+There were only 4 exclusions, leaving a final sample of n = 208. There were an equal number of exclusions in each experimental condition.
 ```{r Data cleaning}
 #### Data exclusion / filtering
 
@@ -191,26 +188,31 @@ same.response.16 <- function(row){
   ifelse(sum(row)==16 | sum(row)==0, 1,0)
 }
 
+rrt.blank <- function(row){
+  ifelse(is_empty(row)==TRUE, 1,0)
+}
+
 rawdata$exclude_skipped <- apply(select(rawdata, starts_with("trial_")),MARGIN=1, FUN=skipped.morethan.8)  
 
 rawdata$exclude_sameresponse <- apply(select(rawdata, starts_with("trial_")),MARGIN=1, FUN=same.response.16)  
 
+rawdata$exclude_rrt_blank <- apply(select(rawdata, starts_with("rrt_")),MARGIN=1, FUN=rrt.blank)
 
 cleandata <- rawdata %>% 
-  filter(Finished == 1 & attn_check_fruit == 1 & exclude_skipped == 0 & exclude_sameresponse==0)
+  filter(Finished == 1 & attn_check_fruit == 1 & exclude_skipped == 0 & exclude_sameresponse==0 & exclude_rrt_blank==0)
 
-cleandata$condition <- as.factor(cleandata$condition)
-cleandata$gender <- as.factor(cleandata$gender)
-cleandata$prior_knowledge_rrt <- as.factor(cleandata$prior_knowledge_rrt)
-cleandata$prior_knowledge_pt <- as.factor(cleandata$prior_knowledge_pt)
-
-    
-# manually filter out anyone who skipped the recall task 
+dim(cleandata)
 
 ```
 
-Creating variables for analysis:
+===Creating variables for analysis===
 ```{r Creating usable data}
+
+# Converting some variables to factors
+cleandata$condition <- as.factor(cleandata$condition)
+cleandata$gender <- as.factor(cleandata$gender)
+cleandata$prior_knowledge_rrt <- as.factor(cleandata$prior_knowledge_rrt)
+
 #### Creating NA imputation function
 na.mean <- function(row){
     replace(row,is.na(row)==T,mean(row, na.rm=T))
@@ -231,27 +233,60 @@ data <- cleandata %>%
   mutate(negative = rowMeans(cleandata[,c("panas_2", "panas_4", "panas_6", "panas_7", "panas_8", "panas_11", "panas_13", "panas_15", "panas_18", "panas_20")])) %>% 
   mutate(mood = positive - negative) %>% 
   unite("partner", c(partner_type_u, partner_type_r), na.rm=TRUE) %>%
-  select(c("condition", "global_small", "global_large", "global_total", "mood", "gender", "partner", "prior_knowledge_rrt", "prior_knowledge_pt", "device"))
+  mutate(partner = as.factor(partner)) %>% 
+  unite("difficulty", c(difficulty_u, difficulty_r), na.rm=TRUE) %>%
+  mutate(difficulty = as.numeric(difficulty)) %>% 
+  select(c("condition", "global_small", "global_large", "global_total", "mood", "gender", "partner", "prior_knowledge_rrt", "difficulty", "device"))
+
+```
+
+
+=== Condition, manipulation, and gender checks ===
+
+First, I'll look at how many people ended up in each condition. Although the experiment was designed to randomize people equally into each group, more participants ended up in the responsive condition (110) than the unresponsive condition (98), probably due people dropping out of the unresponsive condition after starting the survey.
+
+```{r}
+
+table(data$condition)
+
+```
+
+Next I'll run a manipulation check to see if the relationship recall task was indeed harder for participants in the unresponsive condition. According to the test below, the unresponsive writing condition was indeed more challenging Mdiff = .61 (on a 1-5 scale), p = .0003.
+
+```{r}
+
+t.test(difficulty ~ condition, data)
+
+
+```
+
+Checking gender: according to the table below, there were more females randomized into the responsive condition vs. the unresponsive condition.
+```{r}
+data$gender <- ifelse(data$gender==1, "Male", ifelse(data$gender == 2, "Female", "Non-binary"))
+table(data$condition, data$gender)
 
 ```
 
 ### Confirmatory analysis
 
+#### Primary test
+Now I will move to the single confirmatory test, a t-test on the global processing scores between conditions:
 ```{r}
 
 t.test(global_total ~ condition, data)
 
-plot(global_total ~ condition, data = data,
-        ylab = "global choice (number of trials)",
-        main = "Global orientation by condition")
+```
+
+Recreating the results table for comparison:
+```{r}
 
 table <- data %>% 
   group_by(condition) %>% 
-  summarize(global = mean(global_total), sd = round(sd(global_total, na.rm=T),2), n = n())
-
-table %>% 
+  summarize(global = round(mean(global_total),2), sd = round(sd(global_total, na.rm=T),2), n = n()) %>% 
   t() %>% 
   as.data.frame()
+
+table
   
 
 ```
@@ -261,13 +296,55 @@ Compare to original table:
 ![Table 6, Reis et al. (2018), p. 30](/Users/catherinegarton/Documents/Grad School/Class and admin/251/reis2018/images/authortable.png){width=50%}
 </center>
 
+Visualizing the results:
+```{r}
+
+plotdata <- data %>% 
+  group_by(condition) %>%
+  dplyr::summarize(avgscore = mean(global_total), sd = sd(global_total, na.rm = T), n =n()) %>% 
+  mutate(upper = (avgscore + (sd/sqrt(n))*1.96), lower = (avgscore - (sd/sqrt(n))*1.96))
+
+
+ggplot(plotdata, aes(x=condition, y=avgscore)) +
+  geom_col(fill="gray") +
+  geom_errorbar(aes(ymin=lower,ymax=upper), width = .05) +
+  labs(y = "Average global processing score", x = "", title = "Global orientation by condition") +
+  coord_cartesian(ylim = c(0,16)) +
+  scale_x_discrete(labels=c("Responsive", "Unresponsive")) +
+  theme_bw() + 
+  theme(plot.title = element_text(hjust=.5))
+
+
+```
+
+
 ### Exploratory analyses
 
 ```{r }
 
-summary(lm(global_total ~ condition*mood, data))
-summary(lm(global_total ~ condition*gender, data))
-summary(lm(global_total ~ condition*partner, data))
-summary(lm(global_total ~ condition*device, data))
+summary(lm(global_total ~ condition, data)) # basic model, no controls
+summary(lm(global_total ~ condition + mood, data)) # controlling for mood
+summary(lm(global_total ~ condition*gender, data)) # testing for interaction with gener
+summary(lm(global_total ~ condition*partner, data)) # testing for interaction with partner category (friend vs. SO)
+summary(lm(global_total ~ device, data)) # testing whether device matters
 
 ```
+None of these models show significance. This suggests that--at least in my sample--there was no effect of condition, mood, gender, partner type, or device type on global-processing scores.
+
+## Discussion
+
+### Summary of Replication Attempt
+
+The original finding was that participants in the responsive condition had significantly higher global processing scores than participants in the unresponsive condition.
+
+This primary statistical test did not replicate. I ran a t-test between the unresponsive and responsive conditions, and my findings showed the reverse trend than the original authors found. The **unresponsive** condition had a higher mean global processing score (10.3) in comparison to the responsive condition (9.4). Moreover, the difference bewteen these groups was not actually statistically significant.
+
+### Commentary
+
+It is unclear to me why this result did not replicate, but I can think of one possible idea. There was a single difference between the original study and my replication, which is that I opted to use a different attention check. In Reis et al. (2018), 30% of the sample was excluded for failing the attention check. The authors' attention check required participants to carefully read a paragraph-long block of text, and then respond to a deceptive question. In order to get this question right, participants had to be detail-oriented and read the whole paragraph in order to spot the attention check. This is a direct confound to the experimental task, which tests whether people focused on big-picture patterns or the details of the constituent parts. 
+
+Although I cannot know for sure, my guess is that people with higher global-processing scores were disproportionately excluded from the original study. If there was unhappy randomization (in terms of participants' dispositional tendencies to process globally vs. locally), this may have accidentally deflated the unresponsive condition.
+
+Alternatively, my reimplementation had a glitch, which caused all of the trials to display on the same page. I don't think this would bias one condition over another, but it does make my replication less neat and adds potential random noise.
+
+As for author input, Prof. Reis was extremely helpful in reviewing my materials and providing feedback. At his suggestion, I randomized the figure trials (to be more consistent with the original experiment) and eliminated an extra question I had added that wasn't in the original. Besides those notes, Prof. Reis did not object to the rest of our reimplementation decisions. He did note that we had dropped the third condition and were using a different attention check, but he accepted the rationale for both. 
