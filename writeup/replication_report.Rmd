@@ -15,13 +15,13 @@ output:
 ## Introduction
 
 ### Background
-Reis and colleagues (2018) reported a series of experiments that examine the interpersonal influences on intellectual humility (IH)^[IH can be thought of as the awareness of one's epistemic limitations, i.e., to what extent you understand that your beliefs might be wrong or may change in the future.]. The authors hypothesized that priming the social cue of partner responsiveness would boost IH, because feeling understood may decrease people's propensity for self-enhancement and allow them to respond to their environment more openly. Study 5, which I will attempt to replicate, finds that priming partner responsiveness promotes a broader cognitive perspective (as measured in a global-local visual orientation task). The authors imply that a broader perspective may be the cognitive underpinnings of intellectual humility.
+In a fascinating series of experiments published in JESP, Reis and colleagues (2018) examined the interpersonal influences on intellectual humility (IH)^[IH can be thought of as the awareness of one's epistemic limitations, i.e., to what extent you understand that your beliefs might be wrong or may change in the future.]. The authors hypothesized that priming the social cue of partner responsiveness would boost IH, because feeling understood may decrease people's propensity for self-enhancement and allow them to respond to their environment more openly. Study 5, which I will attempt to replicate, finds that priming partner responsiveness promotes a broader cognitive perspective (as measured in a global-local visual orientation task). The authors imply that a broader perspective may be the cognitive underpinnings of intellectual humility.
 
 ### Justification
 Intellectual humility has been the backbone of my research interests. The affective roots of IH are incredibly understudied, and I am hoping to explore the roles of threat and competition (vs. psychological safety and trust) in enabling intellectual humility about morally divisive or identity-based beliefs. This is the most relevant paper in the extant literature, because it provides preliminary evidence that feelings of safety and support increase cognitive openness.
 
 ### Stimuli and procedures
-Participants will be recruited from Prolific and randomized to one of two conditions^[Note that this differs from the original study, in which there was also a neutral control. However, I am underpowered to examine three conditions, and the original effect was only found between the responsive and unresponsive conditions.]: responsive or unresponsive partner. In the responsive (vs. unresponsive) condition, participants are asked to describe 2 (vs. 10) kind or considerate things their partner had done for them in the past week. It is generally easy to think of 2 such examples and harder to think of 10; this relative availability primes confidence or doubt in one's partner's responsiveness. Then participants will complete 16 trials of the global-local visual orientation task (see example image below). Finally, participants will complete the 20-item PANAS measure of mood, a potential confounding variable. I expect the study to be programmable in Qualtrics and to take no longer than 8 minutes per participant.
+Participants will be recruited from Prolific and randomized to one of two conditions^[Note that this differs from the original study, in which there was also a neutral control. However, I am underpowered to examine three conditions, and the original effect was only found between the responsive and unresponsive conditions.]: responsive or unresponsive partner. In the responsive (vs. unresponsive) condition, participants are asked to describe 2 (vs. 10) kind or considerate things their partner had done for them in the past week. It is generally easy to think of 2 such examples and harder to think of 10; this relative availability primes confidence or doubt in one's partner's responsiveness. Then participants complete 16 trials of the global-local visual orientation task (see example image below). Finally, participants complete the 20-item PANAS measure of mood, a potential confounding variable. The survey can be implemented in Qualtrics and should take roughly 8 minutes per participant.
 
 <center>
 ![Fig. 1, Reis et al. (2018), p. 30](/Users/catherinegarton/Documents/Grad School/Class and admin/251/reis2018/images/global_local.png){width=50%}
@@ -29,7 +29,7 @@ Participants will be recruited from Prolific and randomized to one of two condit
 
 
 ### Anticipated challenges
-* Appropriate power. The authors recruited 225 participants per condition, for a target of 188 after deletions, based on expected effect sizes. In a post-hoc power analysis (based on the magnitude of the effect the authors found, assuming no bias in the estimate), their sample size afforded 99% power. Given the budget for this class, I proposed a target sample of 180 participants after exclusions^[I will account for a 15% buffer for exlusions] (90 per condition), which would provide 80% power for an effect size of the same magnitude, **d** = .37.
+* Appropriate power. The authors recruited 225 participants per condition, for a target of 188 after deletions, based on expected effect sizes. In a post-hoc power analysis (based on the magnitude of the effect the authors found, assuming no bias in the estimate), their sample size afforded 99% power. Given the budget for this class, I proposed a target sample of 180 participants after exclusions^[I will account for a 15% buffer for exclusions] (90 per condition), which would provide only 80% power for an effect size of the same magnitude, **d** = .37. Thus, given the sample size constraints, I will have less power than the original study.
 
 ### Links
 View the project repository on Github: [Psych 251 repo](https://github.com/psych251/reis2018){target="_blank"}
@@ -76,7 +76,7 @@ Finally, participants will respond to a manipulation check (i.e., the ease or di
 ### Analysis Plan
 
 #### Data cleaning 
-Data will be excluded from analysis if any of the following criteria apply (according to reasons cited by the original authors):
+Participants will be excluded from analysis if any of the following criteria apply (according to reasons cited by the original authors):
 
 * failing the attention check
 * leaving the relationship recall task items blank
@@ -84,14 +84,14 @@ Data will be excluded from analysis if any of the following criteria apply (acco
 * choosing the same response on all 16 trials^[I don't understand the logic of this exclusion, but I am retaining it for consistency with the original paper]
 
 #### Data processing
-The independent variable, perceived responsiveness, will be captured by Qualtrics embedded data according to participants' randomized condition.
+The independent variable, perceived responsiveness, will be captured by Qualtrics embedded data according to the participant's randomized condition.
 
-The dependent variable, cognitive broadening, will be calculated by summing the number of trials of which participants selected the "global processing" image (i.e., the image with pattern-based similarity rather than constituent-shape similarity). 
-Note: Based on a reproducibility analysis I completed with the authors' public data, I determined that the authors first summed global processing scores within the first 8 trials (which contain small figures containing 3-4 blocks each) and within the last 8 trials (which contain large figures containing 9-10 blocks each). Within each of these sets, they interpolated any NA values by calculating the mean likelihood of a global-processing choice for the completed trials and substituting that value for the missing trial(s). They then summed the small-figure trials and large-figure trials to create a composite global processing score, which was used for the ANOVA. I will follow the authors' analytic choices to preserve the consistency of the replication.
+The dependent variable, cognitive broadening, will be calculated by summing the number of trials of which participants selected the "global processing" figure (i.e., the figure with pattern-based similarity rather than constituent-shape similarity). 
+Note: Based on a reproducibility analysis I completed with the authors' public data, I determined that the authors first summed global processing scores within the first 8 trials (which contained small figures containing 3-4 blocks each) and within the last 8 trials (which contained large figures containing 9-10 blocks each). Within each of these sets, they interpolated any NA values by calculating the mean likelihood of a global-processing choice for the completed trials and substituting that value for the missing trial(s). They then summed the small-figure trials and large-figure trials to create a composite global processing score, which was used for the ANOVA. I will follow the authors' analytic choices to preserve the consistency of the replication.
 
 A current mood score will be created by subtracting the mean score across negative items from the mean score across positive items. 
 
-### Key analysis
+#### Key analysis
 The key analysis is a between-subjects unpaired t-test on the global-processing mean scores between the responsive and unresponsive conditions. A significant mean difference, such that the responsive condition shows a higher global processing score, would replicate the original finding. If a significant difference is found, I am also interested to see if the magnitude of the effect size is similar.
 
 #### Additional analyses
@@ -108,7 +108,7 @@ Because the original dataset is public, I will also run a t-test between conditi
 
 3. The authors included some additional questions^[These questions were: how often participants chose shapes based on constituent similarity and how often participants chose shapes based on pattern similarity.] in their survey materials. These items are not part of the specific effect I am planning to replicate, so I am excluding them from the survey for the sake of time. Because these measures were collected after both the manipulation and DV task, I do not expect them to make a difference in the effect of interest.
 
-4. I decided to use a different attention check that is more straightforward and may be perceived less like we are trying to 'trick' or 'catch' participants. This change would only impact the effect of interest if mine or the authors' original attention check selectively excluded participants from one condition more than the other. I do not know if this was the case for the original study (in which case I would argue that the current attention check is a more valid test of the hypothesis), but I will confirm in my sample that roughly equal numbers of participants were excluded from each condition. 
+4. I decided to use a different attention check that is more straightforward and may be perceived less like we are trying to 'trick' or 'catch' participants. This change would only impact the effect of interest if mine or the authors' original attention check selectively excluded participants from one condition more than the other. I do not know if this was the case for the original study, but I will confirm in my sample that roughly equal numbers of participants were excluded from each condition. 
 
 ### Methods Addendum (Post Data Collection)
 
@@ -116,14 +116,13 @@ Because the original dataset is public, I will also run a t-test between conditi
 
 I recruited 212 English-speaking adults on Prolific. After exclusions, I was left with 208 participants for analysis. Consistent with Reis et al. (2018), the only demographic we collected was gender: Our sample composed of 40.9% male, 56.3% female, and 2.8% non-binary.
 
-
 #### Differences from pre-data collection methods plan
+
 Before launching the survey, the original authors advised me that they had randomized the global-local processing trials. I updated my reimplementation accordingly. Unfortunately, by adding randomization to each question of the task, Qualtrics eliminated the page breaks I had placed between trials. This means that all trials were presented on the same page. Additionally, since questions had been designed to auto-advance, after selecting their first answer participants got a warning message asking if they wanted to proceed to the next page despite skipping 15 questions, or stay on the page and answer the rest. We still received complete data from almost all participants, so it seems like most people made it through this step. However, the task may have been more confusing to participants than we intended for this reason.
 
+***
 
 ## Results
-
-### Data preparation
 	
 ```{r, include=F}
 
@@ -132,9 +131,9 @@ library(here)
 
 ```
 
-===Reproducing author results===
+### Reproducing author results
 
-First, I will reproduce the authors' results from their public data, and I will run a t-test between the responsive and unresponsive conditions so that I have a directly comparable statistical test. I was able to reproduce the same means and test statistics as the original article. I also computed a t-test, resulting in a value of p = .0006, t(337.82) = 3.46.
+First, I will reproduce the authors' results from their public data, and I will run a t-test between the responsive and unresponsive conditions so that I have a directly comparable statistical test. 
 ```{r Reproducing author results, warning=FALSE}
 
 ####Load Relevant Libraries and Functions
@@ -152,16 +151,25 @@ authordata %>%
   summarize(mean = mean(Globaltotal_total),
             sd = sd(Globaltotal_total)) 
 
-#Determining test statistic if I conduct a t-test between  conditions of interest in the authors' original data
+
+```
+I was able to reproduce the same means and test statistics as the original article. [Unresponsive: M = 10.5, SD = 5.04. Responsive: M = 12.3, SD = 4.38.] The ANOVA between the three conditions yielded F = 6.07(2,517), p = .002.
+
+
+```{r Reproducing author results, t-test}
+#Determining test statistic from t-test between conditions of interest in the authors' original data
 authordata_subset <- subset(authordata, Conditions != "Control")
 t.test(Globaltotal_total ~ Conditions, authordata_subset)
 
-
 ```
+The statistical test I will be directly comparing to is the t-test between the unresponsive and responsive conditions. This resulted in a value of p = .0006, t(337.82) = 3.46, same means and standard deviations.
 
-===Importing new raw data===
 
-Next I will turn to the analysis of my replication data.
+### Data preparation
+
+Next I will turn to the equivalent analysis of my replication data.
+
+##### Importing data
 ```{r, Import raw data, warning=F}
 
 ####Import data
@@ -174,9 +182,7 @@ rawdata <- read_csv(here("data/rawdata/rawdata.csv"),
 
 ```
 
-===Cleaning the data===
-
-There were only 4 exclusions, leaving a final sample of n = 208. There were an equal number of exclusions in each experimental condition.
+##### Cleaning data
 ```{r Data cleaning}
 #### Data exclusion / filtering
 
@@ -204,9 +210,10 @@ cleandata <- rawdata %>%
 dim(cleandata)
 
 ```
+There were only 4 exclusions, leaving a final sample of n = 208. There were an equal number of exclusions in each experimental condition.
 
-===Creating variables for analysis===
-```{r Creating usable data}
+##### Creating variables of interest
+```{r Creating variables}
 
 # Converting some variables to factors
 cleandata$condition <- as.factor(cleandata$condition)
@@ -236,48 +243,60 @@ data <- cleandata %>%
   mutate(partner = as.factor(partner)) %>% 
   unite("difficulty", c(difficulty_u, difficulty_r), na.rm=TRUE) %>%
   mutate(difficulty = as.numeric(difficulty)) %>% 
-  select(c("condition", "global_small", "global_large", "global_total", "mood", "gender", "partner", "prior_knowledge_rrt", "difficulty", "device"))
+  select(c("condition", "global_small", "global_large", "global_total", "mood", "gender", "partner", "prior_knowledge_rrt", "difficulty", "device")) %>% 
+  mutate("id" = seq(1,208, by = 1))
 
 ```
 
+### Descriptive Checks 
 
-=== Condition, manipulation, and gender checks ===
+##### Condition
 
-First, I'll look at how many people ended up in each condition. Although the experiment was designed to randomize people equally into each group, more participants ended up in the responsive condition (110) than the unresponsive condition (98), probably due people dropping out of the unresponsive condition after starting the survey.
-
+First, I will assess how many people ended up in each condition. 
 ```{r}
 
 table(data$condition)
 
+t.test(id ~ condition, data)
+
 ```
+Although the experiment was designed to allocate people equally into each group, more participants ended up in the responsive condition (110) than the unresponsive condition (98), probably due to people dropping out of the unresponsive condition after starting the survey. It is unclear why more people dropped out of the unresponsive condition. I ran a t-test between conditions, which was not significant, suggesting that this allocation may be compatible with random chance. Alternatively, the unresponsive condition may have induced negative emotions, causing participants in that condition to want to stop the study more frequently.
 
-Next I'll run a manipulation check to see if the relationship recall task was indeed harder for participants in the unresponsive condition. According to the test below, the unresponsive writing condition was indeed more challenging Mdiff = .61 (on a 1-5 scale), p = .0003.
+##### Manipulation
 
+Next I'll run a manipulation check to see if the relationship recall task was indeed harder for participants in the unresponsive condition. 
 ```{r}
 
 t.test(difficulty ~ condition, data)
 
 
 ```
+The unresponsive writing condition was indeed more challenging, with Mdiff = .61 (on a 1-5 scale), p = .0003. The manipulation was successful.
 
-Checking gender: according to the table below, there were more females randomized into the responsive condition vs. the unresponsive condition.
+##### Gender distribution
+
+Next I will check the distribution of gender across conditions. 
 ```{r}
 data$gender <- ifelse(data$gender==1, "Male", ifelse(data$gender == 2, "Female", "Non-binary"))
 table(data$condition, data$gender)
 
 ```
+According to this table, there were slightly more females in the responsive condition than the unresponsive condition, while men were fairly evenly split.
+
 
 ### Confirmatory analysis
 
-#### Primary test
-Now I will move to the single confirmatory test, a t-test on the global processing scores between conditions:
+#### Primary statistical test
+Now I will move to the single confirmatory test: a t-test of the global processing scores between conditions.
 ```{r}
 
 t.test(global_total ~ condition, data)
 
-```
 
-Recreating the results table for comparison:
+```
+The means were not statistically different between groups (p = .166, 95% CI = [-2.16, .37]). Interestingly, the mean difference also trended in the unexpected direction. The mean of the responsive group was 9.45 trials, and the mean in the unresponsive group was 10.34 trials.
+
+#### Primary results table
 ```{r}
 
 table <- data %>% 
@@ -290,13 +309,14 @@ table
   
 
 ```
-
 Compare to original table:
 <center>
 ![Table 6, Reis et al. (2018), p. 30](/Users/catherinegarton/Documents/Grad School/Class and admin/251/reis2018/images/authortable.png){width=50%}
 </center>
 
-Visualizing the results:
+
+#### Visualizing the results
+
 ```{r}
 
 plotdata <- data %>% 
@@ -316,35 +336,81 @@ ggplot(plotdata, aes(x=condition, y=avgscore)) +
 
 
 ```
-
+Note: this is just for visualization purposes. There was no comparison figure in original article.
 
 ### Exploratory analyses
 
+Below I test four exploratory models: 
+(a) Consistent with the authors, I tested whether the effect of condition on global processing exists when controlling for positive/negative affect.
+(b) Consistent with the authors, I tested whether the effect of condition on global processing is moderated by gender.
+(c) For my own curiosity, I tested whether the results differed depending on whether the relationship partner chosen in the priming task was a close friend or romantic partner.
+(d) For my own curiosity, I tested whether the results were impacted by the way the trials were displayed on different devices (e.g., phone vs. laptop).
 ```{r }
+# a
+# controlling for mood
+summary(lm(global_total ~ condition + mood, data))
 
-summary(lm(global_total ~ condition, data)) # basic model, no controls
-summary(lm(global_total ~ condition + mood, data)) # controlling for mood
-summary(lm(global_total ~ condition*gender, data)) # testing for interaction with gener
-summary(lm(global_total ~ condition*partner, data)) # testing for interaction with partner category (friend vs. SO)
-summary(lm(global_total ~ device, data)) # testing whether device matters
+# b
+# interaction with gender
+summary(lm(global_total ~ condition*gender, data))
+
+# c
+# interaction with partner category
+summary(lm(global_total ~ condition*partner, data))
+
+# d
+# does device independently matter?
+summary(lm(global_total ~ device, data))
+
+
 
 ```
-None of these models show significance. This suggests that--at least in my sample--there was no effect of condition, mood, gender, partner type, or device type on global-processing scores.
+None of the variables in these models reach significance. This suggests that--at least in my sample--there was no effect of condition, mood, gender, partner type, or device type on global-processing scores.
+
+Finally, I tested whether my results changed meaningfully when I included all participants (no exclusions).
+```{r}
+
+completedata <- rawdata
+
+# Converting some variables to factors
+completedata$condition <- as.factor(completedata$condition)
+
+completedata[,c(names(select(completedata, starts_with("trial_sm"))))] <- sapply(completedata[,c(names(select(completedata, starts_with("trial_sm"))))], na.mean)
+
+completedata[,c(names(select(completedata, starts_with("trial_lg"))))] <- sapply(completedata[,c(names(select(completedata, starts_with("trial_lg"))))], na.mean)
+
+#### Prepare data for analysis - create columns etc.
+completedata <- completedata %>% 
+  mutate(global_small = rowSums(select(completedata, starts_with("trial_sm")), na.rm = TRUE)) %>% 
+  mutate(global_large = rowSums(select(completedata, starts_with("trial_lg")), na.rm = TRUE)) %>% 
+  mutate(global_total = global_small + global_large) 
+
+dim(completedata) # There are now 212 participants
+
+t.test(global_total ~ condition, completedata)
+
+
+```
+The results did not change. This is unsurprising, since there were only 4 exclusions. I would be interested in running this analysis on the original authors' pre-cleaned dataset, which had a higher percentage of exclusions.
+
+***
 
 ## Discussion
 
 ### Summary of Replication Attempt
 
-The original finding was that participants in the responsive condition had significantly higher global processing scores than participants in the unresponsive condition.
+The original finding was that participants in the responsive condition had significantly higher global processing scores (12.27 trials) than participants in the unresponsive condition (10.51 trials), p = .0006.
 
-This primary statistical test did not replicate. I ran a t-test between the unresponsive and responsive conditions, and my findings showed the reverse trend than the original authors found. The **unresponsive** condition had a higher mean global processing score (10.3) in comparison to the responsive condition (9.4). Moreover, the difference bewteen these groups was not actually statistically significant.
+This primary statistical test did not replicate. I ran a t-test between the unresponsive and responsive conditions, and my findings showed the opposite trend. The responsive condition had a **lower** mean global processing score (9.45 trials) than the responsive condition (10.34 trials). Additionally, the difference between these groups was not statistically significant, although this is unsurprising given that we were 80% powered (a priori) to detect an effect size of approximately *d* = .37, and we found an effect size of *d* = -.2.
 
 ### Commentary
 
-It is unclear to me why this result did not replicate, but I can think of one possible idea. There was a single difference between the original study and my replication, which is that I opted to use a different attention check. In Reis et al. (2018), 30% of the sample was excluded for failing the attention check. The authors' attention check required participants to carefully read a paragraph-long block of text, and then respond to a deceptive question. In order to get this question right, participants had to be detail-oriented and read the whole paragraph in order to spot the attention check. This is a direct confound to the experimental task, which tests whether people focused on big-picture patterns or the details of the constituent parts. 
+The results across studies are inconclusive, and it's unclear why the effect did not replicate. Without more faithful replications in the future, I am unsure whether the true effect is better represented by the original study or my replication attempt. A few noteworthy differences come to mind, however.
 
-Although I cannot know for sure, my guess is that people with higher global-processing scores were disproportionately excluded from the original study. If there was unhappy randomization (in terms of participants' dispositional tendencies to process globally vs. locally), this may have accidentally deflated the unresponsive condition.
+* The original study had a larger sample size (178 and 172 in the responsive and unresponsive conditions, respectively) than this replication attempt (110 and 98, respectively). A larger sample is less likely to produce unhappy randomization and  spurious results.
+* Selective attrition could have also skewed the result of my replication attempt. For example, the 12 participants from the unresponsive condition who stopped early might have otherwise brought down the global mean of that group.
+* The main methodological difference between the original study and the replication was the nature of the attention check. In Reis et al. (2018), the attention check required participants to carefully read a paragraph-long block of text, ignore the next question they were asked, and type something else they had previously been instructed into the box. In order to get this question right, participants had to be sufficiently detail-oriented to read the whole paragraph and spot the correct answer. (30% of participants failed and were excluded.) This could confound the experimental task, which tests whether people focus on big-picture patterns or the details of constituent parts. Thus, it is possible that participants with higher dispositional global processing were disproportionately excluded from the original study and that this could have accidentally deflated the unresponsive condition.
+* Finally, my reimplementation survey had a glitch that caused all of the trials to display on the same page. I don't think this should have biased one condition over another, but it does make my replication less neat and adds potential random noise.
 
-Alternatively, my reimplementation had a glitch, which caused all of the trials to display on the same page. I don't think this would bias one condition over another, but it does make my replication less neat and adds potential random noise.
-
-As for author input, Prof. Reis was extremely helpful in reviewing my materials and providing feedback. At his suggestion, I randomized the figure trials (to be more consistent with the original experiment) and eliminated an extra question I had added that wasn't in the original. Besides those notes, Prof. Reis did not object to the rest of our reimplementation decisions. He did note that we had dropped the third condition and were using a different attention check, but he accepted the rationale for both. 
+### Appreciation for author input
+Professor Reis was extremely helpful in reviewing my materials and providing feedback. He noticed two discrepancies in my implementation prior to launch, including the lack of figure randomization and the presence of an additional question that wasn't in the original; I updated both discrepancies accordingly. Professor Reis was understanding of the other changes that were necessitated by our limited class budget, such as the lack of a 3rd condition and smaller sample size. I am incredibly appreciative of his encouragement and responsiveness throughout the project, as well as for his modeling of open science practices (e.g., publishing all study materials and data online).
