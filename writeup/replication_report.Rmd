@@ -118,7 +118,7 @@ I recruited 212 English-speaking adults on Prolific. After exclusions, I was lef
 
 #### Differences from pre-data collection methods plan
 
-Before launching the survey, the original authors advised me that they had randomized the global-local processing trials. I updated my reimplementation accordingly. Unfortunately, by adding randomization to each question of the task, Qualtrics eliminated the page breaks I had placed between trials. This means that all trials were presented on the same page. Additionally, since questions had been designed to auto-advance, after selecting their first answer participants got a warning message asking if they wanted to proceed to the next page despite skipping 15 questions, or stay on the page and answer the rest. We still received complete data from almost all participants, so it seems like most people made it through this step. However, the task may have been more confusing to participants than we intended for this reason.
+Before launching the survey, the original authors advised me that they had randomized the global-local processing trials. I updated my reimplementation accordingly. Unfortunately, by adding randomization to each question of the task, Qualtrics eliminated the page breaks I had placed between trials. This means that all trials were presented on the same page. Additionally, since questions had been designed to auto-advance, after selecting their first answer participants got a warning message asking if they wanted to proceed to the next page despite skipping 15 questions, or stay on the page and answer the rest. We still received complete data from almost all participants, so it seems like most people made it through this step. However, the task may have been more confusing to participants than we intended for this reason. Encouragingly, only one participant complained about this in the comment box of the survey, and all other comments indicated that the survey was smooth and enjoyable.
 
 ***
 
@@ -173,12 +173,13 @@ Next I will turn to the equivalent analysis of my replication data.
 ```{r, Import raw data, warning=F}
 
 ####Import data
-df_names <- read_csv(here("data/rawdata/rawdata.csv"), n_max=0) %>% names()
+df_names <- read_csv(here("data/anon_rawdata/rawdata_anon.csv"), n_max=0) %>% names()
 
-rawdata <- read_csv(here("data/rawdata/rawdata.csv"), 
+rawdata <- read_csv(here("data/anon_rawdata/rawdata_anon.csv"), 
                     col_names = df_names,
                     col_types = "d",
                     skip = 3)
+
 
 ```
 
@@ -410,7 +411,7 @@ The results across studies are inconclusive, and it's unclear why the effect did
 * The original study had a larger sample size (178 and 172 in the responsive and unresponsive conditions, respectively) than this replication attempt (110 and 98, respectively). A larger sample is less likely to produce unhappy randomization and  spurious results.
 * Selective attrition could have also skewed the result of my replication attempt. For example, the 12 participants from the unresponsive condition who stopped early might have otherwise brought down the global mean of that group.
 * The main methodological difference between the original study and the replication was the nature of the attention check. In Reis et al. (2018), the attention check required participants to carefully read a paragraph-long block of text, ignore the next question they were asked, and type something else they had previously been instructed into the box. In order to get this question right, participants had to be sufficiently detail-oriented to read the whole paragraph and spot the correct answer. (30% of participants failed and were excluded.) This could confound the experimental task, which tests whether people focus on big-picture patterns or the details of constituent parts. Thus, it is possible that participants with higher dispositional global processing were disproportionately excluded from the original study and that this could have accidentally deflated the unresponsive condition.
-* Finally, my reimplementation survey had a glitch that caused all of the trials to display on the same page. I don't think this should have biased one condition over another, but it does make my replication less neat and adds potential random noise.
+* Finally, my reimplementation survey had a glitch that caused all of the trials to display on the same page. I don't think this should have biased one condition over another, but it does make my replication less neat and adds potential random noise. 
 
 ### Appreciation for author input
 Professor Reis was extremely helpful in reviewing my materials and providing feedback. He noticed two discrepancies in my implementation prior to launch, including the lack of figure randomization and the presence of an additional question that wasn't in the original; I updated both discrepancies accordingly. Professor Reis was understanding of the other changes that were necessitated by our limited class budget, such as the lack of a 3rd condition and smaller sample size. I am incredibly appreciative of his encouragement and responsiveness throughout the project, as well as for his modeling of open science practices (e.g., publishing all study materials and data online).

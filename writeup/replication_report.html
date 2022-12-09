@@ -1746,7 +1746,9 @@ despite skipping 15 questions, or stay on the page and answer the rest.
 We still received complete data from almost all participants, so it
 seems like most people made it through this step. However, the task may
 have been more confusing to participants than we intended for this
-reason.</p>
+reason. Encouragingly, only one participant complained about this in the
+comment box of the survey, and all other comments indicated that the
+survey was smooth and enjoyable.</p>
 <hr />
 </div>
 </div>
@@ -1820,15 +1822,15 @@ data.</p>
 <div id="importing-data" class="section level5">
 <h5>Importing data</h5>
 <pre class="r"><code>####Import data
-df_names &lt;- read_csv(here(&quot;data/rawdata/rawdata.csv&quot;), n_max=0) %&gt;% names()</code></pre>
-<pre><code>## Rows: 0 Columns: 78
+df_names &lt;- read_csv(here(&quot;data/anon_rawdata/rawdata_anon.csv&quot;), n_max=0) %&gt;% names()</code></pre>
+<pre><code>## Rows: 0 Columns: 75
 ## ── Column specification ────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
-## chr (78): StartDate, EndDate, Status, Progress, Duration (in seconds), Finis...
+## chr (75): StartDate, EndDate, Status, Progress, Duration (in seconds), Finis...
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<pre class="r"><code>rawdata &lt;- read_csv(here(&quot;data/rawdata/rawdata.csv&quot;), 
+<pre class="r"><code>rawdata &lt;- read_csv(here(&quot;data/anon_rawdata/rawdata_anon.csv&quot;), 
                     col_names = df_names,
                     col_types = &quot;d&quot;,
                     skip = 3)</code></pre>
@@ -1859,7 +1861,7 @@ cleandata &lt;- rawdata %&gt;%
   filter(Finished == 1 &amp; attn_check_fruit == 1 &amp; exclude_skipped == 0 &amp; exclude_sameresponse==0 &amp; exclude_rrt_blank==0)
 
 dim(cleandata)</code></pre>
-<pre><code>## [1] 208  81</code></pre>
+<pre><code>## [1] 208  78</code></pre>
 <p>There were only 4 exclusions, leaving a final sample of n = 208.
 There were an equal number of exclusions in each experimental
 condition.</p>
@@ -2157,7 +2159,7 @@ completedata &lt;- completedata %&gt;%
   mutate(global_total = global_small + global_large) 
 
 dim(completedata) # There are now 212 participants</code></pre>
-<pre><code>## [1] 212  84</code></pre>
+<pre><code>## [1] 212  81</code></pre>
 <pre class="r"><code>t.test(global_total ~ condition, completedata)</code></pre>
 <pre><code>## 
 ##  Welch Two Sample t-test
